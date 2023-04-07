@@ -1,51 +1,55 @@
-//daffa safriel & 2040221104
+// daffa safriel & 2040221104
 
-//tugas pendahuluan 1
+// tugas pendahuluan 1
 #include <stdio.h>
 
 int main()
 {
     int i, j;
 
-    for ( i = 0; i < 3; i++)
+    for (i = 0; i < 3; i++)
     {
-        for ( j = 0; j < 6; j++)
+        for (j = 0; j < 6; j++)
         {
             printf("A");
         }
         printf("\n");
     }
-    
 }
 
-//tugas pendahuluan 2
+// tugas pendahuluan 2
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int i, j, k;
-    
-    for (i = 0; i < 2; i++) {
-        for (j = 0; j < 3; j++) {
+
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
             printf("*");
         }
-        for (j = 0; j < 4; j++) {
+        for (j = 0; j < 4; j++)
+        {
             printf("-");
         }
         printf("\n");
     }
     for (i = 0; i < 2; i++)
     {
-        for (j = 0; j < 7; j++) {
+        for (j = 0; j < 7; j++)
+        {
             printf("-");
         }
         printf("\n");
     }
-    
+
     return 0;
 }
 
-//tugas percobaan 1
-#include<stdio.h>
+// tugas percobaan 1
+#include <stdio.h>
 
 int main()
 {
@@ -53,19 +57,19 @@ int main()
 
     printf("masukan nilai: ");
     scanf("%d", &n);
-    
-    for ( i = 1; i <= n+1; i++)
+
+    for (i = 1; i <= n + 1; i++)
     {
-        for ( j = 1; j < i; j++)
+        for (j = 1; j < i; j++)
         {
             printf("*");
         }
         printf("\n");
     }
-    
-    for(i=n-1; i>=1; i--) 
+
+    for (i = n - 1; i >= 1; i--)
     {
-        for(j=1; j<=i; j++) 
+        for (j = 1; j <= i; j++)
         {
             printf("*");
         }
@@ -73,74 +77,75 @@ int main()
     }
 }
 
-//tugas percobaan 2
+// tugas percobaan 2
 #include <stdio.h>
 
 int main()
 {
     int i, j;
 
-    for ( i = 1; i <= 5; i++)
+    for (i = 1; i <= 5; i++)
     {
-        printf("%d ", i*1);
+        printf("%d ", i * 1);
     }
     printf("\n");
-    for ( i = 1; i <= 5; i++)
+    for (i = 1; i <= 5; i++)
     {
-        printf("%d ", i*2);
+        printf("%d ", i * 2);
     }
     printf("\n");
-    for ( i = 1; i <= 5; i++)
+    for (i = 1; i <= 5; i++)
     {
-        printf("%d ", i*3);
+        printf("%d ", i * 3);
     }
     printf("\n");
-    
+
     return 0;
 }
 
-//tugas percobaan 3
+// tugas percobaan 3
 #include <stdio.h>
 
 int main()
 {
     int i, j, k, n;
-    float r, l=0;
-    
+    float r, l = 0;
+
     printf("masukan jumlah data? ");
     scanf("%d", &j);
 
-    for ( i = 1; i <= j; i++)
+    for (i = 1; i <= j; i++)
     {
         printf("data ke- %d? ", i);
         scanf("%d", &k);
 
-        if (k<0)
+        if (k < 0)
         {
             i--;
             printf("nilai yang dimasukan negatif!!!\n");
             continue;
         }
-        l +=k;
+        l += k;
     }
-    r=l/j;
+    r = l / j;
     printf("banyaknya mahasiswa     = %d\n", j);
     printf("total nilai mahasiswa   = %.0f\n", l);
     printf("nilai rata rata         = %.2f\n", r);
     return 0;
 }
 
-//tugas percobaan 4
+// tugas percobaan 4
 #include <stdio.h>
 
-int main() {
-    
+int main()
+{
+
     int B, a, c, d;
 
     printf("masukan jumlah data? ");
     scanf("%d", &c);
 
-    for ( a = 1; a <= c; a++)
+    for (a = 1; a <= c; a++)
     {
         printf("data ke- %d? ", a);
         scanf("%d", &B);
@@ -148,10 +153,10 @@ int main() {
         {
             goto Tak_berhingga;
         }
-        d +=B;
+        d += B;
     }
-    Tak_berhingga:
-        printf("Nilai B adalah 0, program berhenti\n");
+Tak_berhingga:
+    printf("Nilai B adalah 0, program berhenti\n");
     // if (B == 0) {
     //     goto Tak_berhingga;
     // } else {
@@ -160,11 +165,11 @@ int main() {
 
     // Tak_berhingga:
     //     printf("Nilai B adalah 0, program berhenti\n");
-    
+
     // return 0;
 }
 
-//tugas lapres 2
+// tugas lapres 2
 #include <stdio.h>
 
 int main()
@@ -174,7 +179,7 @@ int main()
     printf("Masukkan jumlah bilangan prima yang ingin ditampilkan: ");
     scanf("%d", &n);
     // while (counter < n)
-    for (j=0 ; counter<n ; j++)
+    for (j = 0; counter < n; j++)
     {
         int num_prima = 1;
         for (i = 2; i <= num / 2; i++)

@@ -218,7 +218,7 @@ int main(int argc, char const *argv[])
         printf("Anda tidak lulus\n");
         break;
     case 70:
-        printf("Anda tidak lulus\n");
+        printf("Anda lulus\n");
         break;
     case 71:
         printf("Anda lulus\n");

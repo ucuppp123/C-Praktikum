@@ -471,4 +471,6 @@ int main(int argc, char const *argv[])
     p2_Percobaan_soal_nomer_2();
     p2_Percobaan_soal_nomer_3();
     p2_Percobaan_soal_nomer_4();
+
+    //wayan jancok
 }

@@ -8,7 +8,7 @@ just wake up and coding again AWKWAKAKAWKAK
 
 
 
-1. git config --globl user.email "your@example.com"
+1. git config --global user.email "your@example.com"
 
 2. git init 
 

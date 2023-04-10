@@ -464,8 +464,9 @@ void p2_Percobaan_soal_nomer_4()
 
 int main(int argc, char const *argv[])
 {
-    p2_tugas_pendahuluan_soal_nomer_2();
     p2_tugas_pendahuluan_soal_nomer_1();
+    p2_tugas_pendahuluan_soal_nomer_1_2nd();
+    p2_tugas_pendahuluan_soal_nomer_2();
     p2_Percobaan_soal_nomer_1();
     p2_Percobaan_soal_nomer_2();
     p2_Percobaan_soal_nomer_3();

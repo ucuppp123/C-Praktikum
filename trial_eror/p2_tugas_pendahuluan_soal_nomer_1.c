@@ -1,7 +1,24 @@
-// PROGRAM SWITCH CASE PALING GOBLOK SAK DUNYO
-// SING MENEHI SOAL JAN GG GAMING
+//PROGRAM DENGAN IF ELSE DAN SWITCH CASE
 
-#include <stdio.h>
+#include <stdio.h>  // PROGRAM DENGAN IF ELSE
+
+int main()
+{
+    int input_nilai;
+    printf("Masukkan nilai ujian : ");
+    scanf("%d", &input_nilai);
+    if (input_nilai <= 70)
+    {
+        printf("Anda tidak lulus\n");
+    }
+    else
+    {
+        printf("Anda Lulus\n");
+    }
+}
+
+
+#include <stdio.h> // PROGRAM DENGAN SWITCH CASE
 
 int main(int argc, char const *argv[])
 {

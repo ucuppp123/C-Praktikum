@@ -112,6 +112,7 @@ char *my_strcpy(char *destination, char *source)
 //     dest[i] = '\0';
 //     return des;
 // }
-int main(int argc, char const *argv[])
+int main()
 {
+    
 }

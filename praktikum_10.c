@@ -80,7 +80,7 @@ void p10_tugas_percobaan_3()
 }
 
 //********** PERCOBAAN NOMER 4 **************//
-char *my_strcpy(char *, char *);
+//char *my_strcpy(char *, char *);
 void p10_tugas_percobaan_4()
 {
     char strA[80] = "A string to be used for demonstration";
@@ -101,7 +101,7 @@ char *my_strcpy(char *destination, char *source)
 }
 
 //********** PERCOBAAN NOMER 5 **************//
-char *my_strcpy(char dest[], char source[]);
+char *my_strcpy(char dest[], char source[])
 {
     int i = 0;
     while (source[i] != '\0')
@@ -110,8 +110,8 @@ char *my_strcpy(char dest[], char source[]);
         i++;
     }
     dest[i] = '\0';
-    return des;
-}
+    return dest;
+};
 int main()
 {
 

@@ -135,11 +135,12 @@ void p9_tugas_percobaan_5()
 
 int main(int argc, char const *argv[])
 {
+    // *** PILIH FUNCTION YANG DIJALANKAN TINGGAL UNCOMMENT CODING DI BAWAH INI ***//
     // p9_tugas_pendahuluan_1();
     // p9_tugas_pendahuluan_2();
     // p9_tugas_percobaan_1();
     // p9_tugas_percobaan_2();
     // p9_tugas_percobaan_3();
     // p9_tugas_percobaan_4();
-    p9_tugas_percobaan_5();
+    // p9_tugas_percobaan_5();
 }

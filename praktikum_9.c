@@ -1,5 +1,7 @@
 // TODO LAPORAN RESMI
 // TODO Kumpulkan listing program, ilustrasi alokasi memorinya beserta hasil eksekusinya
+// *** PROGRAM IKI RUN NDE LAPTOPMU YAN, SESUAI SOAL ... by Jona ***/
+
 
 #include <stdio.h>>
 

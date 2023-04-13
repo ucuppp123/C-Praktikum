@@ -101,18 +101,18 @@ char *my_strcpy(char *destination, char *source)
 }
 
 //********** PERCOBAAN NOMER 5 **************//
-// char *my_strcpy(char dest[], char source[]);
-// {
-//     int i = 0;
-//     while (source[i] != '\0')
-//     {
-//         dest[i] = source[i];
-//         i++;
-//     }
-//     dest[i] = '\0';
-//     return des;
-// }
+char *my_strcpy(char dest[], char source[]);
+{
+    int i = 0;
+    while (source[i] != '\0')
+    {
+        dest[i] = source[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return des;
+}
 int main()
 {
-    
+
 }

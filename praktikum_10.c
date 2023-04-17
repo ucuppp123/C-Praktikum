@@ -1,6 +1,7 @@
 // TODO Laporan Resmi
 // TODO Kumpulkan listing program, ilustrasi alokasi memorinya beserta hasil eksekusinya
 // *** PROGRAM IKI RUN NDE LAPTOPMU YAN, SESUAI SOAL ... by Jona ***/
+// *** DI RUN PROGRAME LAK MISAL ENEK SOAL "Serta gambarkan ilustrasi alokasi memori"
 
 #include <stdio.h>
 
@@ -12,9 +13,15 @@ void p10_tugas_pendahuluan_1()
     int *x, *y;
     x = &a;
     y = &b;
+    printf("Alamat memori x : %p\n", (void *)&x);
+    printf("Alamat memori y : %p\n", (void *)&y);
     printf("SEMULA : a = %d b = %d\n", a, b);
     *x = *x * 4;
     *y = *y + *x;
+    printf("Alamat memori *x : %p\n", *x);
+    printf("Alamat memori *y : %p\n", *y);
+    printf("Alamat memori a : %p\n", (void *)&a);
+    printf("Alamat memori b : %p\n", (void *)&y);
     printf("KINI : a = %d b = %d\n", a, b);
 }
 
@@ -80,7 +87,7 @@ void p10_tugas_percobaan_3()
 }
 
 //********** PERCOBAAN NOMER 4 **************//
-//char *my_strcpy(char *, char *);
+char *my_strcpy(char *, char *);
 void p10_tugas_percobaan_4()
 {
     char strA[80] = "A string to be used for demonstration";
@@ -101,22 +108,22 @@ char *my_strcpy(char *destination, char *source)
 }
 
 //********** PERCOBAAN NOMER 5 **************//
-char *my_strcpy(char dest[], char source[])
-{
-    int i = 0;
-    while (source[i] != '\0')
-    {
-        dest[i] = source[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return dest;
-};
+// char *my_strcpy(char dest[], char source[])
+// {
+//     int i = 0;
+//     while (source[i] != '\0')
+//     {
+//         dest[i] = source[i];
+//         i++;
+//     }
+//     dest[i] = '\0';
+//     return dest;
+// }
 int main()
 {
     p10_tugas_pendahuluan_1();
-    p10_tugas_percobaan_1();
-    p10_tugas_percobaan_2();
-    p10_tugas_percobaan_3();
-    p10_tugas_percobaan_4();
+    //p10_tugas_percobaan_1();
+    //p10_tugas_percobaan_2();
+    //p10_tugas_percobaan_3();
+    //p10_tugas_percobaan_4();
 }

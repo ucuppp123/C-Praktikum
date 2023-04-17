@@ -9,7 +9,7 @@ void p9_tugas_pendahuluan_1()
 {
     char *str = "halo apa kabar";
     printf("%s \n", str);                       // cetak
-    printf("Alamat lokasi : %p", (void *)&str); // ilustrasi alokasi memori
+    printf("Alamat lokasi str : %p", (void *)&str); // ilustrasi alokasi memori
 }
 
 void p9_tugas_pendahuluan_2()
@@ -17,7 +17,7 @@ void p9_tugas_pendahuluan_2()
     char *str = "TELEKOMUNIKASI";
     char *ptr = &str[2];                        // di variabelkan dalam bentuk array karena hanya dapat satu variabel dan bentuk array yang dapat menentukan alokasi memory
     printf("Huruf ketiga  : %c \n", *ptr);      // cetak dengan variabel pointer
-    printf("Alamat lokasi : %p", (void *)&ptr); // penulisan code untuk mencari alokasi memori huruf ketiga dari TELEKOMUNIKASI
+    printf("Alamat lokasi huruf ketiga : %p", (void *)&ptr); // penulisan code untuk mencari alokasi memori huruf ketiga dari TELEKOMUNIKASI
 }
 
 void p9_tugas_percobaan_1()

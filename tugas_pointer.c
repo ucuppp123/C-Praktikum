@@ -96,7 +96,7 @@ void latihan_PPT_nomer_3()
     p1 = &i1;                                                    // <--- variabel p1 mengakses data yang diaskes variabel i1
     printf("Lokasi memori p1              : %p\n", &p1);         // <--- lokasi memori p1
     printf("Lokasi memori yang diakses p1 : %p\n", p1);          // <--- bukti variabel p1 mengakses lokasi memori variabel i1
-    i2 = *p1 / 2 - 2 * 3;                                        // <--- variabel i2 mengakses lokasi memori yang diakses variabel p1, dan melakukan operasi matematika pada data yang diakses variabel p1
+    i2 = *p1 / 2 - 2 * 3;                                        // <--- variabel i2 mengakses lokasi memori yang diakses variabel p1, dan melakukan operasi matematika pada data yg diakses p1
     printf("Nilai data i1                 : %d\n", i2);          // <--- nilai data i1 berubah
     printf("Lokasi memori i2              : %p\n", &i2);         // <--- lokasi memori i2
     printf("Lokasi memori yang diakses i2 : %p\n", (void *)&i2); // <---- lokasi memori yang diakses i2
@@ -104,12 +104,12 @@ void latihan_PPT_nomer_3()
     printf("i1 = %d, i2 = %d, p1 = %d, p2 = %d\n", i1, i2, *p1, *p2);
 }
 
+    //** OJO LALI PROGRAME DI RUN HASILE DI SCREENSHOT MAS WAYAN :) **//
 int main()
 {
-    //** OJO LALI PROGRAME DI RUN HASILE DI SCREENSHOT MAS WAYAN :) **//
     // TODO untuk nge RUN programnya, silahkan uncomment code di bawah ini untuk menjalankan function
-    // latihan_waktu_zoom_nomer_1();
-    // latihan_PPT_nomer_1();
-    // latihan_PPT_nomer_2();
-    // latihan_PPT_nomer_3();
+    latihan_waktu_zoom_nomer_1();
+    latihan_PPT_nomer_1();
+    latihan_PPT_nomer_2();
+    latihan_PPT_nomer_3();
 }

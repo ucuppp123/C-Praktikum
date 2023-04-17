@@ -20,6 +20,9 @@ printf("Lokasi memori pz : %p\n", &pz);
     jika pz = z dan mencetak pz dengan variabel %p lalu (void/int *)pz maka akan tercetak alamat memori z
     jika pz = z dan mencetak pz dengan variabel %p lalu (void/int *)&pz maka akan tercetak alamat memori z
 */
+
+//******* COMMENT NEK NDUWUR KALIMAT IKI GAUSAH DILEBOKNE CAH by.Jono  ******/////
+
 void latihan_waktu_zoom_nomer_1()
 {
     int z = 20, s = 30, *pz, *ps;

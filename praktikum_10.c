@@ -3,6 +3,9 @@
 // *** PROGRAM IKI RUN NDE LAPTOPMU YAN, SESUAI SOAL ... by Jona ***/
 // *** DI RUN PROGRAME LAK MISAL ENEK SOAL "Serta gambarkan ilustrasi alokasi memori"
 
+//*** SOAL 1 SAMPAI 4 LESTING PROGAM DAN BUKTI ALOKASI MEMORI
+//*** SOAL 5 HANYA BANDINGKAN FUNCTION SAJA
+
 #include <stdio.h>
 
 //******** PENDAHULUAN NOMER 1 ********//

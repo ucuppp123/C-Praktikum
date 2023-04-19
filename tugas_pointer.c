@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 // *** SOAL ZOOM DAN PPT NOMER 1 SAMA ****//
-/* CARA PRINTF ALOKASI MEMORI SEBUAH VARIABEL
+/* SYNTAX PRINTF ALOKASI MEMORI SEBUAH VARIABEL
 printf("Lokasi memori pz : %p\n", (int *)&pz);
 printf("Lokasi memori pz : %p\n", (void *)&pz);
 printf("Lokasi memori pz : %p\n", &pz);
+printf("Bukti Alamat memori x mengacu pada a : %p\n", x);
 */
 //! CONTOH PEMBUKTIAN MEMORI DENGAN POINTER DAN VARIABEL
 // int z = 20, *pz

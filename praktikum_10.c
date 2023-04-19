@@ -13,15 +13,17 @@ void p10_tugas_pendahuluan_1()
     int *x, *y;
     x = &a;
     y = &b;
-    printf("Alamat memori x : %p\n", (void *)&x);
-    printf("Alamat memori y : %p\n", (void *)&y);
+    printf("Alamat memori a : %p\n", &a);
+    printf("Alamat memori b : %p\n", &b);
+    printf("Bukti Alamat memori x mengacu pada a : %p\n", x);
+    printf("Bukti Alamat memori y mengacu pada b : %p\n", y);
+    printf("Bukti nilai variabel x = a : %i\n", *x);
+    printf("Bukti nilai variabel y = b : %i\n", *y);
     printf("SEMULA : a = %d b = %d\n", a, b);
     *x = *x * 4;
+    printf("Dalam statement *x = *x * 4 nilai yang diakses *x menjadi : %i\nkarena *x mengakses data memori variabel a, sehingga mengubah 4 menjadi %i\n", a, a);
     *y = *y + *x;
-    printf("Alamat memori *x : %p\n", *x);
-    printf("Alamat memori *y : %p\n", *y);
-    printf("Alamat memori a : %p\n", (void *)&a);
-    printf("Alamat memori b : %p\n", (void *)&y);
+    printf("Dalam statement *y = *y + *x nilai yang diakses *y menjadi : %i\nkarena *y mengakses data memori variabel b, sehingga mengubah 7 menjadi %i\n", b, b);
     printf("KINI : a = %d b = %d\n", a, b);
 }
 
@@ -46,6 +48,7 @@ int r, q = 10;              // VARIABEL PERCOBAAN NOMER 2
 int go_crazy(int *, int *); // VARIABEL PERCOBAAN NOMER 2
 void p10_tugas_percobaan_2()
 {
+
     int *ptr1 = &q;
     int *ptr2 = &q;
     r = go_crazy(ptr2, ptr1);
@@ -122,8 +125,8 @@ char *my_strcpy(char *destination, char *source)
 int main()
 {
     p10_tugas_pendahuluan_1();
-    //p10_tugas_percobaan_1();
-    //p10_tugas_percobaan_2();
-    //p10_tugas_percobaan_3();
-    //p10_tugas_percobaan_4();
+    // p10_tugas_percobaan_1();
+    // p10_tugas_percobaan_2();
+    // p10_tugas_percobaan_3();
+    // p10_tugas_percobaan_4();
 }

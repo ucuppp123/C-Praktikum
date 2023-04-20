@@ -36,42 +36,40 @@ void p10_tugas_percobaan_1()
     int var_x = 20;
     int *ptr1;
     int **ptr2;
-    printf("Nilai data pada var_x   : %i\n", var_x);    //<--- PENJELASAN
-    printf("Alamat memori var_x     : %p\n", &var_x);   //<--- PENJELASAN
+    printf("Nilai data pada var_x   : %i\n", var_x);  //<--- PENJELASAN
+    printf("Alamat memori var_x     : %p\n", &var_x); //<--- PENJELASAN
     ptr1 = &var_x;
     printf("Bukti variabel ptr1 mengakses alamat memori var_x dalam statement ptr1 = &var_x : %p\n", ptr1); //<--- PENJELASAN
     printf("Bukti variabel ptr1 memiliki data yang sama dengan variabel var_x : %i\n", *ptr1);              //<--- PENJELASAN
     ptr2 = &ptr1;
-    printf("Lokasi memori variabel ptr1 : %p\n", &ptr1); //<--- PENJELASAN
+    printf("Lokasi memori variabel ptr1 : %p\n", &ptr1);                                                  //<--- PENJELASAN
     printf("Bukti variabel ptr2 mengakses alamat memori ptr1 dalam statement ptr2 = &ptr1 : %p\n", ptr2); //<--- PENJELASAN
     printf("Bukti variabel ptr2 memiliki data yang sama dengan variabel ptr1 dan var_x : %i\n", **ptr2);  //<--- PENJELASAN
     *ptr1 = var_x + **ptr2;
-    printf("Dalam statement *ptr1 = var_x + **ptr2 nilai dari ptr1 menjadi : %i\n", *ptr1); //<--- PENJELASAN
+    printf("Dalam statement *ptr1 = var_x + **ptr2 nilai dari ptr1 menjadi : %i\n", *ptr1);                                                                                                                                                                                    //<--- PENJELASAN
     printf("Hal ini dikarenakan *ptr1 mengakses memori var_x yang berilai 20, dan ditambah **ptr2, dimana **ptr2 yang juga mengakses var_x dengan data 20\nsehingga muncul nilai 40 yang berasal dari 20+20 = 40 dimana sesuai dengan statement *ptr1 = var_x + **ptr2 \n\n"); //<--- PENJELASAN
-    printf("Nilai var_x = *ptr1   = %d\n", *ptr1);      // }
-    printf("Nilai var_x = **ptr2  = %d\n", **ptr2);     // }
-    printf("ptr1 = &var_x         = %p\n", ptr1);       //  <=== SOAL  
-    printf("ptr2 = &ptr1          = %p\n", ptr2);       // }
-    printf(" &ptr2                = %p\n", &ptr2);      // }
+    printf("Nilai var_x = *ptr1   = %d\n", *ptr1);                                                                                                                                                                                                                             // }
+    printf("Nilai var_x = **ptr2  = %d\n", **ptr2);                                                                                                                                                                                                                            // }
+    printf("ptr1 = &var_x         = %p\n", ptr1);                                                                                                                                                                                                                              //  <=== SOAL
+    printf("ptr2 = &ptr1          = %p\n", ptr2);                                                                                                                                                                                                                              // }
+    printf(" &ptr2                = %p\n", &ptr2);                                                                                                                                                                                                                             // }
 }
 
 //******** PERCOBAAN NOMER 2 ********//
 int r, q = 10;              // VARIABEL PERCOBAAN NOMER 2
-int go_crazy(int *, int *); // VARIABEL PERCOBAAN NOMER 2
+int go_crazy(int *, int *); // FUNCTION PERCOBAAN NOMER 2
 void p10_tugas_percobaan_2()
 {
 
     int *ptr1 = &q;
     int *ptr2 = &q;
     r = go_crazy(ptr2, ptr1);
-    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n",
-           q, r, *ptr1, *ptr2);
+    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
     ptr1 = &r;
     q = go_crazy(ptr1, ptr2);
     r = r * 5;
     q = q + r;
-    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n",
-           q, r, *ptr1, *ptr2);
+    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n",   q, r, *ptr1, *ptr2);
 }
 int go_crazy(int *p1, int *p2)
 {
@@ -137,8 +135,8 @@ char *my_strcpy(char *destination, char *source)
 int main()
 {
     // p10_tugas_pendahuluan_1();
-    p10_tugas_percobaan_1();
-    // p10_tugas_percobaan_2();
+    // p10_tugas_percobaan_1();
+    p10_tugas_percobaan_2();
     // p10_tugas_percobaan_3();
     // p10_tugas_percobaan_4();
 }

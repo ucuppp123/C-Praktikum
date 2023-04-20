@@ -20,8 +20,8 @@ void p10_tugas_pendahuluan_1()
     printf("Alamat memori b : %p\n", &b);
     printf("Bukti Alamat memori x mengacu pada a : %p\n", x); //<--- PENJELASAN
     printf("Bukti Alamat memori y mengacu pada b : %p\n", y); //<--- PENJELASAN
-    printf("Bukti nilai variabel x = a : %i\n", *x); //<--- PENJELASAN
-    printf("Bukti nilai variabel y = b : %i\n", *y); //<--- PENJELASAN
+    printf("Bukti nilai variabel x = a : %i\n", *x);          //<--- PENJELASAN
+    printf("Bukti nilai variabel y = b : %i\n", *y);          //<--- PENJELASAN
     printf("SEMULA : a = %d b = %d\n", a, b);
     *x = *x * 4;
     printf("Dalam statement *x = *x * 4 nilai yang diakses *x menjadi : %i\nkarena *x mengakses data memori variabel a, sehingga mengubah 4 menjadi %i\n", a, a); //<--- PENJELASAN
@@ -46,8 +46,8 @@ void p10_tugas_percobaan_1()
     printf("Bukti variabel ptr2 mengakses alamat memori ptr1 dalam statement ptr2 = &ptr1 : %p\n", ptr2); //<--- PENJELASAN
     printf("Bukti variabel ptr2 memiliki data yang sama dengan variabel ptr1 dan var_x : %i\n", **ptr2);  //<--- PENJELASAN
     *ptr1 = var_x + **ptr2;
-    printf("Dalam statement *ptr1 = var_x + **ptr2 nilai dari ptr1 menjadi : %i\n", *ptr1);                                                                                                                                                                                    //<--- PENJELASAN
-    printf("Hal ini dikarenakan *ptr1 mengakses memori var_x yang berilai 20, dan ditambah **ptr2, dimana **ptr2 yang juga mengakses var_x dengan data 20\nsehingga muncul nilai 40 yang berasal dari 20+20 = 40 dimana sesuai dengan statement *ptr1 = var_x + **ptr2 \n\n"); //<--- PENJELASAN
+    printf("Dalam statement *ptr1 = var_x + **ptr2 nilai dari ptr1 menjadi : %i\n", *ptr1);                                                                                                                                                                                  //<--- PENJELASAN
+    printf("Hal ini dikarenakan *ptr1 mengakses memori var_x yang berilai 20, dan ditambah **ptr2, dimana **ptr2 yang juga mengakses var_x dengan data 20\nsehingga muncul nilai 40 yang berasal dari 20+20 = 40 dimana sesuai dengan statement *ptr1 = var_x + **ptr2 \n"); //<--- PENJELASAN
     printf("Nilai var_x = *ptr1   = %d\n", *ptr1);
     printf("Nilai var_x = **ptr2  = %d\n", **ptr2);
     printf("ptr1 = &var_x         = %p\n", ptr1);
@@ -136,8 +136,8 @@ char *my_strcpy(char *destination, char *source)
 // }
 int main()
 {
-    p10_tugas_pendahuluan_1();
-    // p10_tugas_percobaan_1();
+    // p10_tugas_pendahuluan_1();
+    p10_tugas_percobaan_1();
     // p10_tugas_percobaan_2();
     // p10_tugas_percobaan_3();
     // p10_tugas_percobaan_4();

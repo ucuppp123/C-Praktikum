@@ -190,6 +190,7 @@ char *my_strcpy(char *destination, char *source)
 }
 
 //********** PERCOBAAN NOMER 5 **************//
+//** HANYA MEMBANDINGKAN FUNCTION UNTUK NOMER 4 ***//
 // char *my_strcpy(char dest[], char source[])
 // {
 //     int i = 0;
@@ -201,6 +202,8 @@ char *my_strcpy(char *destination, char *source)
 //     dest[i] = '\0';
 //     return dest;
 // }
+
+
 int main()
 {
     // p10_tugas_pendahuluan_1();

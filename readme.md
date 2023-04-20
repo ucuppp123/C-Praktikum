@@ -3,8 +3,8 @@
 
 for references you can accses at https://mieke.lecturer.pens.ac.id/bhs-c/teori-c/
 
-branch information 
+# branch information 
 
-main & entry = Laptop ASUS
+main  = Laptop ASUS
 
 master = Laptop HP

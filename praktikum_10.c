@@ -64,14 +64,12 @@ void p10_tugas_percobaan_2()
     int *ptr1 = &q;
     int *ptr2 = &q;
     r = go_crazy(ptr2, ptr1);
-    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n",
-           q, r, *ptr1, *ptr2);
+    printf("q = %d\n, r = %d\n, *ptr1 = %d\n, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
     ptr1 = &r;
     q = go_crazy(ptr1, ptr2);
     r = r * 5;
     q = q + r;
-    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n",
-           q, r, *ptr1, *ptr2);
+    printf("q = %d\n, r = %d\n, *ptr1 = %d\n, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
 }
 int go_crazy(int *p1, int *p2)
 {

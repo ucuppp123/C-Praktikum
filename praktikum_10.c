@@ -205,7 +205,7 @@ int main()
 {
     // p10_tugas_pendahuluan_1();
     // p10_tugas_percobaan_1();
-    p10_tugas_percobaan_2();
-    // p10_tugas_percobaan_3();
+    // p10_tugas_percobaan_2();
+     p10_tugas_percobaan_3();
     // p10_tugas_percobaan_4();
 }

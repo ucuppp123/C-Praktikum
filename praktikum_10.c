@@ -63,19 +63,40 @@ void p10_tugas_percobaan_2()
 
     int *ptr1 = &q;
     int *ptr2 = &q;
-    r = go_crazy(ptr2, ptr1);
-    printf("q = %d\n, r = %d\n, *ptr1 = %d\n, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
-    ptr1 = &r;
-    q = go_crazy(ptr1, ptr2);
-    r = r * 5;
-    q = q + r;
-    printf("q = %d\n, r = %d\n, *ptr1 = %d\n, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
+    // printf("Lokasi memori variabel ptr1 = %p\n", &ptr1);
+    // printf("Lokasi memori variabel ptr2 = %p\n", &ptr2);
+    // printf("Lokasi memori variabel q    = %p\n", (int *)&q);
+    // printf("Lokasi memori variabel r    = %p\n", (int *)&r);
+    // printf("Bukti variabel ptr 1 mengakses memori variabel q = %p\n", ptr1);
+    // printf("Bukti variabel ptr 2 mengakses memori variabel q = %p\n", ptr2);
+    // printf("Nilai variabel q yang di akses variabel ptr1 dan ptr2, dan juga di inputkan dalam function go_crazzy = %i\n", *ptr1);
+    r = go_crazy(ptr2, ptr1); //<--- 
+    // printf("Lokasi memori variabel r                                                                   = %p\n", (int *)&r);
+    // printf("Lokasi memori function go_crazy                                                            = %p\n", (void *)&go_crazy);
+    // printf("Bukti variabel ptr1 masih mengakses lokasi memori q dan diteruskan pada function go crazzy = %p\n", ptr1);
+    // printf("Bukti variabel ptr2 masih mengakses lokasi memori q dan diteruskan pada function go crazzy = %p\n", ptr2);
+    printf("q \t= %d\nr \t= %d\n*ptr1   = %d\n*ptr2   = %d\n", q, r, *ptr1, *ptr2);
+    // ptr1 = &r;
+    // q = go_crazy(ptr1, ptr2);
+    // r = r * 5;
+    // q = q + r;
+    // printf("q = %d\n, r = %d\n, *ptr1 = %d\n, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
 }
 int go_crazy(int *p1, int *p2)
 {
+    //*** PENJELASAN ALOKASI MEMORI FUNCTION go_crazzy pada soal percobaan nomer 2  ***//
     int x = 5;
+    printf("Lokasi memori variabel x                                          = %p\n", (int *)&x);
+    printf("Lokasi memori variabel *p1                                        = %p\n", &p1);
+    printf("Lokasi memori variabel *p2                                        = %p\n", &p2);
+    printf("Bukti *p1 mengakses lokasi memori yang sama dengan variabel ptr1  = %p\n", p1);
+    printf("Bukti *p1 mengakses lokasi memori yang sama dengan variabel ptr2  = %p\n", p2);
     r = 12;
+    printf("Lokasi memori variabel r                                          = %p\n", (int *)&r);
+    printf("Nilai data pada variabel r                                        = %i\n", r);
     *p2 = *p1 * 2;
+    printf("Pada statement *p2 = *p1 * 2 menyatakan lokasi memori yang diakses *p2 yaitu q, sama dengan *p1 dikali 2, yang berarti dimana *p1 juga mengakses memori variabel q yaitu 10, maka 10 dikali 2 = 20, hingga merubah nilai pada variabel q menjadi 20\n");
+    printf("Bukti bahwa nilai pada variabel q pada statement *p2 = *p1 * 2 menjadi = %i\n", q);
     p1 = &x;
     return *p1 * 3;
 }
@@ -87,7 +108,7 @@ void p10_tugas_percobaan_3()
 {
     char *pA, *pB;
     puts(strA);
-    pA = strA;
+    pA = strA; 
     puts(pA);
     pB = strB;
     putchar('\n');
@@ -135,8 +156,8 @@ char *my_strcpy(char *destination, char *source)
 int main()
 {
     // p10_tugas_pendahuluan_1();
-    p10_tugas_percobaan_1();
-    // p10_tugas_percobaan_2();
+    // p10_tugas_percobaan_1();
+    p10_tugas_percobaan_2();
     // p10_tugas_percobaan_3();
     // p10_tugas_percobaan_4();
 }

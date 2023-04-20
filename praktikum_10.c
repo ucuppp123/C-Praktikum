@@ -16,17 +16,17 @@ void p10_tugas_pendahuluan_1()
     int *x, *y;
     x = &a;
     y = &b;
-    printf("Alamat memori a                      : %p\n", &a);
-    printf("Alamat memori b                      : %p\n", &b);
-    printf("Bukti Alamat memori x mengacu pada a : %p\n", x);
-    printf("Bukti Alamat memori y mengacu pada b : %p\n", y);
-    printf("Bukti nilai variabel x = a           : %i\n", *x);
-    printf("Bukti nilai variabel y = b           : %i\n", *y);
+    printf("Alamat memori a                      : %p\n", &a); // <--- PENJELASAN
+    printf("Alamat memori b                      : %p\n", &b); // <--- PENJELASAN
+    printf("Bukti Alamat memori x mengacu pada a : %p\n", x);  // <--- PENJELASAN
+    printf("Bukti Alamat memori y mengacu pada b : %p\n", y);  // <--- PENJELASAN
+    printf("Bukti nilai variabel x = a           : %i\n", *x); // <--- PENJELASAN
+    printf("Bukti nilai variabel y = b           : %i\n", *y); // <--- PENJELASAN
     printf("SEMULA : a = %d b = %d\n", a, b);
     *x = *x * 4;
-    printf("Dalam statement *x = *x * 4 nilai yang diakses *x menjadi : %i\nkarena *x mengakses data memori variabel a, sehingga mengubah 4 menjadi %i\n", a, a);
+    printf("Dalam statement *x = *x * 4 nilai yang diakses *x menjadi : %i\nkarena *x mengakses data memori variabel a, sehingga mengubah 4 menjadi %i\n", a, a); // <--- PENJELASAN
     *y = *y + *x;
-    printf("Dalam statement *y = *y + *x nilai yang diakses *y menjadi : %i\nkarena *y mengakses data memori variabel b, sehingga mengubah 7 menjadi %i\n", b, b);
+    printf("Dalam statement *y = *y + *x nilai yang diakses *y menjadi : %i\nkarena *y mengakses data memori variabel b, sehingga mengubah 7 menjadi %i\n", b, b); // <--- PENJELASAN
     printf("KINI : a = %d b = %d\n", a, b);
 }
 
@@ -69,7 +69,7 @@ void p10_tugas_percobaan_2()
     q = go_crazy(ptr1, ptr2);
     r = r * 5;
     q = q + r;
-    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n",   q, r, *ptr1, *ptr2);
+    printf("q = %d, r = %d, *ptr1 = %d, *ptr2 = %d\n", q, r, *ptr1, *ptr2);
 }
 int go_crazy(int *p1, int *p2)
 {

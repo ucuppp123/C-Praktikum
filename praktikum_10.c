@@ -2,9 +2,8 @@
 // TODO Kumpulkan listing program, ilustrasi alokasi memorinya beserta hasil eksekusinya
 // *** PROGRAM IKI RUN NDE LAPTOPMU YAN, SESUAI SOAL ... by Jona ***/
 // *** DI RUN PROGRAME LAK MISAL ENEK SOAL "Serta gambarkan ilustrasi alokasi memori"
-
-//*** SOAL 1 SAMPAI 4 LESTING PROGAM DAN BUKTI ALOKASI MEMORI
-//*** SOAL 5 HANYA BANDINGKAN FUNCTION SAJA
+//*** SOAL 1 SAMPAI 4 LISTING PROGAM DAN BUKTI ALOKASI MEMORI BRARTTI KODINGANE DI COPAS DAN DI RUN LALU SCREENSHOT HASILE
+//*** SOAL 5 HANYA BANDINGKAN FUNCTION SAJA  IKI RUN NDE LAPTOPMU DAN DI SCREENSHOT HASILE
 
 #include <stdio.h>
 
@@ -168,7 +167,7 @@ void p10_tugas_percobaan_3()
     putchar('\n');
     while (*pA != '\0')
     {
-        *pB++ = *pA++;   //<--- PROSES PENYALINAN CHAR PER CHAR DENGAN INCREMENT SELAMA *pA tidak sama dengan NULL
+        *pB++ = *pA++; //<--- PROSES PENYALINAN CHAR PER CHAR DENGAN INCREMENT SELAMA *pA tidak sama dengan NULL
     }
     *pB = '\0';
     puts(strB);
@@ -216,39 +215,141 @@ void p10_tugas_percobaan_4()
     char strA[80] = "A string to be used for demonstration";
     char strB[80];
 
-    my_strcpy(strB, strA);
+    printf("Alokasi memori variabel 'strB'                     = %p\n", (char *)&strB);
+    printf("Alokasi memori variabel 'strA'                     = %p\n", (char *)&strA);
+    my_strcpy(strB, strA); // SEPERTI NOMER 3, NAMUN PROSES PENYALINAN STRINGNYA DIBUATKAN KE FUNCTION my_strcpy
     puts(strB);
 }
 char *my_strcpy(char *destination, char *source)
 {
     char *p = destination;
+    printf("Bukti pointer 'p' mengakses variabel 'destination' = %p\n", p);
+    printf("Alokasi memori yang diakses variabel 'destination' sama dengan 'strB' = %p\n", destination);
+    printf("Alokasi memori yang diakses variabel 'source' sama dengan 'strA'      = %p\n", source);
     while (*source != '\0')
     {
-        *p++ = *source++;
+        *p++ = *source++; // PROSES PENYALINAN STRING PER CHARACTER DENGAN INCREMENT
     }
     *p = '\0';
-    return destination;
+    return destination; // mengembalikan nilai ke 'strB' karena parameter 'destination' sama dengan 'strB' saat dilakukan pemanggilan fungsi my_strcpy
 }
+
+/* ILUSTRASI ALOKASI MEMORI DAN STEP BY STEP PENJELASANNYA !!!!!!!
+
+    1. char *my_strcpy(char *, char *);
+    mendeklarasikan fungsi my_strcpy yang mengambil dua parameter bertipe pointer ke char
+    yaitu char * untuk destination dan source. Fungsi ini akan mengembalikan pointer bertipe char *.
+
+    2. char strA[80] = "A string to be used for demonstration";
+    mendeklarasikan variabel 'strA' dengan tipe array char. 'strA' diinisialisasi dengan string "A string to be used for demonstration".
+
+    3. char strB[80];
+    mendeklarasikan 'strB' dengan tipe array char.
+
+    4. my_strcpy(strB, strA);
+    pemanggilan fungsi my_strcpy yang mengirimkan strB dan strA sebagai parameter.
+    Fungsi my_strcpy menyalin isi dari strA ke strB dengan proses increment.
+
+    5. char *my_strcpy(char *destination, char *source)
+    mendeklarasikan fungsi my_strcpy, yang mengambil dua parameter, yaitu destination dan source, yang sudah dideklarasikan sebelumnya.
+
+    6. char *p = destination;
+    mendeklarasikan variabel bertipe char * dengan nama p yang diinisialisasi dengan variabel destination.
+    Variabel p akan digunakan untuk mengakses alokasi memori variabel destination
+
+    7. while (*source != '\0')
+    {*p++ = *source++;}
+    digunakan sebuah looping while untuk menyalin isi dari 'source' yan mengakses variabel 'strA' ke 'destination' yang mengakses 'strB'
+    sampai karakter null/(\0) true. Dalam while ini, data dari 'source' akan ditambahkan secara bergantian ke 'destination' atau 'ke strB'
+    dan nilai p juga akan ikut bertambah.
+
+    8. return destination;
+    dilakukan pengembalian nilai 'destination'  ke variabel 'strB'.
+
+    9. puts(strB);
+    dalam statement ini 'strB' sudah memiliki nilai yang disalin 'dari strA' yang penyalinan nilai tersebut dilakukan pada
+    fungsi my_strcpy, dengan cara deklarasi variabel baru untuk mengakses memori 'destinantion' yang mengakses memori 'strB',
+    dan melakukan increment pada variabel baru tersebut di sama dengankan increment 'source++' yang mengacu pada nilai data 'strA'
+    kemudia n setelah tersalin , lalu menampilkan variabel 'strB' ke terminal yang sudah memiliki nilai
+*/
 
 //********** PERCOBAAN NOMER 5 **************//
 //** HANYA MEMBANDINGKAN FUNCTION UNTUK NOMER 4 ***//
-// char *my_strcpy(char dest[], char source[])
-// {
-//     int i = 0;
-//     while (source[i] != '\0')
-//     {
-//         dest[i] = source[i];
-//         i++;
-//     }
-//     dest[i] = '\0';
-//     return dest;
-// }
+char *my_strcpy(char dest[], char source[])
+{
+    int i = 0;
+    printf("Alokasi memori yang diakses variabel 'dest[i]' sama dengan 'strB'   = %p\n", dest);
+    printf("Alokasi memori yang diakses variabel 'source[i]' sama dengan 'strA' = %p\n", source);
+    while (source[i] != '\0')  // while akan berhenti jika nilai data yang diakses source (strA), bernilai NULL/(0)
+    {
+        dest[i] = source[i];   // Proses penyalinan char per char antar variabel array 'dest' dan array 'source', dengan memanfaatkan I untuk Menambah alokasi memori penyimpanan array
+        i++;
+    }
+    dest[i] = '\0';
+    return dest;
+}
+
+/* ILUSTRASI ALOKASI MEMORI DAN STEP BY STEP PENJELASANNYA NAMUN MENGGUNAKAN FUNCTION NOMER 5 !!!!!!!
+
+    1. char *my_strcpy(char *, char *);
+    mendeklarasikan fungsi my_strcpy yang mengambil dua parameter bertipe pointer ke char
+    yaitu char * untuk destination dan source. Fungsi ini akan mengembalikan pointer bertipe char *.
+
+    2. char strA[80] = "A string to be used for demonstration";
+    mendeklarasikan variabel 'strA' dengan tipe array char. 'strA' diinisialisasi dengan string "A string to be used for demonstration".
+
+    3. char strB[80];
+    mendeklarasikan 'strB' dengan tipe array char.
+
+    4. my_strcpy(strB, strA);
+    pemanggilan fungsi my_strcpy yang mengirimkan strB dan strA sebagai parameter.
+    Fungsi my_strcpy menyalin isi dari strA ke strB dengan proses increment.
+
+    5. char *my_strcpy(char dest[], char source[])
+    mendeklarasikan fungsi my_strcpy, yang mengambil dua parameter, yaitu 'dest[]' dan 'source[]' bertipe array, yang sudah dideklarasikan sebelumnya.
+
+    6. int i = 0;;
+    mendeklarasikan variabel i = o untuk melakukan increment
+
+    7. while (source[i] != '\0')
+    {dest[i] = source[i];
+        i++;}
+    while akan berhenti jika nilai data yang diakses source (strA), bernilai NULL/(0), kemudian adanya
+    Proses penyalinan char per char antar variabel array 'dest' dan array 'source', dengan memanfaatkan variabel 'i' untuk Menambah 
+    alokasi memori penyimpanan array dan untuk menampilkan nilai data berikutnya pada array 'source' untuk disalin
+
+    8. return dest;
+    dilakukan pengembalian nilai 'dest' ke variabel 'strB'.
+
+    9. puts(strB);
+    dalam statement ini 'strB' sudah memiliki nilai yang disalin 'dari strA' yang penyalinan nilai tersebut dilakukan pada
+    fungsi my_strcpy, dengan cara deklarasi variabel baru untuk mengakses memori 'destinantion' yang mengakses memori 'strB',
+    dan melakukan increment pada variabel baru tersebut di sama dengankan increment 'source++' yang mengacu pada nilai data 'strA'
+    kemudia n setelah tersalin , lalu menampilkan variabel 'strB' ke terminal yang sudah memiliki nilai
+*/
+
+
+//*** KESIMPULAN PENGGUNAAN FUNCTION ANTARA NOMER 4 DAN 5   *****//
+/*
+    Pada nomer 4 function my_strcpy menggunakan parameter pointer untuk menyalin datanya sehingga menggunakan 
+    syntax *p++ (pointer increment) untuk menyalin, sedangkan
+    Pada nomer 5 function my_strcpy menggunakan parameter array untuk menyalin datanya sehingga mengguanakan   
+    syntax dest[i] = source[i], kemudian diikuti i++, dimana source[i] berguna untuk menampilkan nilai data yang akan disalin
+    sedangkan dest[i] untuk menyiapkan alokasi memori untuk setiap se per data yang akn disalin, dan i++
+    untuk penambah penyimpanan pada dest[i] maupun penampil data pada source[i]. 
+*/
+
 
 int main()
 {
+    //**** SILAHKAN UNCOMMENT KODE DIBAWAH UNTUK MENJALANKAN MASING-MASING SOAL ****/
+    //**** KHUSUS p10_tugas_percobaan_4(), ITU  UNTUK SOAL NOMER 4 DAN 5, KARENA HANYA MEMBANDINGKAN FUNGSI
+    //** DAN DI NOMER 4 DAN 5 MEMLIKI FUNGSINYA SENDIRI-SENDIRI UNTUK MENGAKSES PROGRAM NOMER 4 NAMUN HANYA BERBEDA LOGIC SAJA
+    //** WIS TAK JELASNO NDE BAGIAN "KESIMPULAN PENGGUNAAN FUNCTION ANTARA NOMER 4 DAN 5"
+    
     // p10_tugas_pendahuluan_1();
     // p10_tugas_percobaan_1();
     // p10_tugas_percobaan_2();
     // p10_tugas_percobaan_3();
-     p10_tugas_percobaan_4();
+    // p10_tugas_percobaan_4();
 }

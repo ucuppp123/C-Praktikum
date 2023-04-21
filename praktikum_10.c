@@ -155,19 +155,60 @@ char strB[80];                    // variabel percobaan nomer 3
 void p10_tugas_percobaan_3()
 {
     char *pA, *pB;
+    printf("Alokasi memori pA   = %p\n", &pA);           //<--- PENJELASAN EKSTERNAL
+    printf("Alokasi memori pB   = %p\n", &pB);           //<--- PENJELASAN EKSTERNAL
+    printf("Alokasi memori strA = %p\n", (char *)&strA); //<--- PENJELASAN EKSTERNAL
+    printf("Alokasi memori strB = %p\n", (char *)&strB); //<--- PENJELASAN EKSTERNAL
     puts(strA);
     pA = strA;
+    printf("Bukti pA mengakses memori strA = %p\n", pA); //<--- PENJELASAN EKSTERNAL
     puts(pA);
     pB = strB;
+    printf("Bukti pB mengakses memori strB = %p\n", pB); //<--- PENJELASAN EKSTERNAL
     putchar('\n');
     while (*pA != '\0')
     {
-        *pB++ = *pA++;
+        *pB++ = *pA++;   //<--- PROSES PENYALINAN CHAR PER CHAR DENGAN INCREMENT SELAMA *pA tidak sama dengan NULL
     }
     *pB = '\0';
     puts(strB);
 }
+/*
+    STEP BY STEP PENJELASAN PERCOBAAN NOMER 3
+   1. char strA[80] = "halo apa kabar";
+   mendefinisikan sebuah array karakter dengan nama 'strA'. Array ini diinisialisasi dengan string "halo apa kabar".
+   Ketika program dijalankan, sistem akan mengalokasikan 80 byte memori untuk variabel ini.
 
+   2. char strB[80];
+   Kode di atas mendefinisikan sebuah array karakter lain dengan nama 'strB'. Array ini tidak diinisialisasi dengan nilai awal apapun.
+   Ketika program dijalankan, sistem akan mengalokasikan 80 byte memori lagi untuk variabel ini.
+
+   3. char *pA *pB
+   mendefinisikan dua pointer karakter dengan nama pA dan pB.
+
+   4. puts(strA);
+   mencetak string "halo apa kabar" ke terminal.
+
+   5. pA = strA;
+   menginisialisasi pointer pA dengan alamat memori array strA
+
+   6. puts(pA);
+   mencetak string yang ditunjuk oleh pointer 'pA' ke terminal. Karena pointer pA menunjuk ke alamat memori array strA,
+   maka string yang dicetak sama dengan string yang dicetak pada baris sebelumnya.
+
+   7. pB = strB;
+   menginisialisasi pointer 'pB' dengan alamat memori array 'strB'.
+
+   8. while (*pA != '\0')
+     {*pB++ = *pA++;}
+        *pB = '\0';
+    menyalin string yang ditunjuk oleh 'pA' ke dalam array 'strB', dengan cara menyalin setiap karakter dari 'pA' ke 'pB' dengan fungsi increment, dan menggeser pointer 'pA' dan 'pB' ke karakter berikutnya,
+    sampai karakter NULL/(0) ditemukan pada string yang ditunjuk 'pA'. Setelah itu, kode di atas menambahkan karakter NULL ke akhir string yang ditunjuk 'pB', untuk mengakhiri string tersebut.
+
+    9. puts(strB);
+     mencetak string yang ada pada array 'strB', yang sudah terisi oleh string yang sama dengan 'strA' dari fungsi while dan increment sebelumnya.
+
+*/
 //********** PERCOBAAN NOMER 4 **************//
 char *my_strcpy(char *, char *);
 void p10_tugas_percobaan_4()
@@ -203,12 +244,11 @@ char *my_strcpy(char *destination, char *source)
 //     return dest;
 // }
 
-
 int main()
 {
     // p10_tugas_pendahuluan_1();
     // p10_tugas_percobaan_1();
     // p10_tugas_percobaan_2();
-     p10_tugas_percobaan_3();
+    p10_tugas_percobaan_3();
     // p10_tugas_percobaan_4();
 }

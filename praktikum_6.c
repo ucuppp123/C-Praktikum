@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+
+//***************** FULL COBA COBA DEWE ****************************/
 //! Coba-coba P6
 void fung_1(void)
 {
@@ -103,7 +106,10 @@ main()
     fung_1();
 }
 
-// Soal Nomer 1 A
+
+//** CODINGANE AWAKMU COPAS MULAI SOKO BARIS 113 YAN */
+
+//*** SoaL Nomer 1 A ****//
 int OddEvenTest(int);
 main()
 {
@@ -119,7 +125,7 @@ int OddEvenTest(int b)
     return a; // balikkan nilai a ke main
 }
 
-// SoaL Nomer 1 B
+//*** SoaL Nomer 1 B ****//
 void demo(void);
 main()
 {
@@ -140,7 +146,7 @@ void demo(void)
     var_static++;
 }
 
-// SoaL Nomer 1 C
+//*** SoaL Nomer 1 C ****//
 void fung_a(void);
 void fung_b(void);
 int x = 20;
@@ -165,11 +171,11 @@ void fung_b(void)
     printf("Nilai x dalam fung_b() = %d\n", x);
 }
 
-// SoaL Nomer 2
-extern int feet;
-extern int feet_to_inchi;
-extern int inchi_to_cm;
-extern int cm_to_m;
+//*** SoaL Nomer 2 ****//
+// extern int feet;
+// extern int feet_to_inchi;
+// extern int inchi_to_cm;
+// extern int cm_to_m;
 int feet;
 int feet_to_inchi;
 int inchi_to_cm;
@@ -199,21 +205,3 @@ main()
 {
     f_to_i();
 }
-
-//? TESTING DC
-// int i;
-
-// void sub_globe(void);
-// int sub_add(void);
-// void sub_minus(int a, int v, float c);
-
-// main()
-// {
-//     extern int i;
-//     void sub_globe(void);
-//     {
-//         printf("nilai i : %d\n", i);
-//     }
-//     i++;
-//     printf("nilai i : %d", i);
-// }

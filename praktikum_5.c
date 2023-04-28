@@ -38,7 +38,7 @@ void soal_percobaan_2()
         total += x;
     }
 
-    avg = (float)total / n;
+    avg = total / n;
 
     printf("Jumlah data adalah: %d\n", total);
     printf("Rata-rata data adalah: %.1f\n", avg);
@@ -48,5 +48,5 @@ int main()
 {
     // soal_pendahuluan();
     // soal_percobaan_1();
-    // soal_percobaan_2();
+     soal_percobaan_2();
 }
